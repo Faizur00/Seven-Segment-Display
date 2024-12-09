@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build GTK App",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-o",
+                "seven_segment",
+                "seven_segment.c",
+                "`pkg-config --cflags gtk+-3.0`",
+                "`pkg-config --libs gtk+-3.0`"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compile GTK application"
+        }
+    ]
+}
