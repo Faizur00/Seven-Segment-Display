@@ -1,7 +1,7 @@
 #include <gtk/gtk.h>
 #include <cairo.h>
 
-// create the segment
+// create the segment for output
 const int segments[10][7] = {
     //A B  C  D  E  F  G     
     {1, 1, 1, 1, 1, 1, 0}, // 0
@@ -16,6 +16,7 @@ const int segments[10][7] = {
     {1, 1, 1, 1, 0, 1, 1}  // 9
 };
 
+// create input segment
 const int input [10][4] = {
    //w x y y
     {0,0,0,0}, //0
@@ -122,11 +123,11 @@ int main(int argc, char *argv[]) {
 
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
-    // Create a grid
+    // Create a gkt grid
     GtkWidget *grid = gtk_grid_new();
     gtk_container_add(GTK_CONTAINER(window), grid);
 
-    // Drawing area
+    // create drawing area
     GtkWidget *drawing_area = gtk_drawing_area_new();
     gtk_widget_set_size_request(drawing_area, 200, 200);
     gtk_grid_attach(GTK_GRID(grid), drawing_area, 0, 0, 10, 1);
@@ -157,6 +158,5 @@ int main(int argc, char *argv[]) {
 
     gtk_widget_show_all(window);
     gtk_main();
-
     return 0;
 }
