@@ -1,33 +1,42 @@
 # Seven-Segment-Display
 **Final Assignment for 2024 Digital System Class Hasanuddin University**
 `Ahmad Faizur Rahman | D121241107`
-***
+
 ## overview
 This Project aim to demonstrate how seven segment display works. Using C GTK 3.24 for the GUI, it illustrates how certain input from BCD can make some output and simulating it on the display number (0-9) just like the LED version.
-***
+
 ## Feature
 * Displaying Number 0-9 on the GUI
 * Buttons to select certain number
 * Displaying the input and output in terminal for each selected number
-***
+
 
 ## How It Works
 
 #### Seven Segment Display
 In seven segement display, each number controlled by 7 segment (just like it names) where each segment is an LED, the seven segment organized in a way that can be illustrated as follows:
-<img src="/pict for readme/Seven segment_inactive.png" alt="example" style="width:300px; height:auto;">
+
+<p align = left>
+    <img src="/pict for readme/Seven segment_inactive.png" alt="example" style="width:300px; height:auto;">
+</p>
 Each segment can be on active state or inactive state. To display certain number, specific segment are will be on active state while others are on inactive. For example to display number three the A,B,C,D, and G gonna turned on like below:
-<img src="/pict for readme/Seven segment_active.png" alt="example" style="width:300px; height:auto;">
+
+<p>
+    <img src="/pict for readme/Seven segment_active.png" alt="example" style="width:300px; height:auto;">
+</p>
+
 The seven segment display also can display in form of alphabets A,B,C,D,E, and F, so using two of these, it can be used to display a hexadecimal digits.
 
 #### Truth Tabel
 For active site on the display we can represented it as number `1` and for the inactive site we can use number `0`, so that we can make the truth tabel for each number on each decimal digits like below:
 
-<img src="/pict for readme/truth table.png" alt="example" style="width:400px; height:auto;">
+<p align = left>
+    <img src="/pict for readme/truth table.png" style="width:400px; height:auto;">
+</p>
 
 To controll the digits that want to be displayed, a binary-coded decimal (BCD) that have 4 bits to representing a binary needed. The decoder maps the input to activating corresponding segment. For example input from BCD is `1,0,0,1 `which then translated to `9` (based on BCD to decimal translation), later number 9 gonna be displayed on the seven segment display by converting the value of 9 which is `1,1,1,1,0,1,1 `
 
-***
+
 ## Code Struture
 
 ### Creating a Gtk window and Gtk grid
