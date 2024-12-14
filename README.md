@@ -142,7 +142,7 @@ Since were having the `MakeFile` we just need to write:
 ```bash
     make
 ```
-to compile it. Then we can start the file using
+to compile it make sure to install the correct compiler that same with the one that ised on the make file, or you can change the compiler on the make file by editing the `cc` . Then we can start the file using
 
 ```bash
     ./seven-segment
